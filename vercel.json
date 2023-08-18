@@ -1,12 +1,14 @@
 {
-    "builds": [{
-        "src": "./photoShare/wsgi.py",
+    "builds": [
+      {
+        "src": "photoShare/wsgi.py",
         "use": "@vercel/python"
-    }],
-    "rewrites": [
-        {
-            "src": "/(.*)",
-            "dest": "./photoShare/wsgi.py"
-        }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "photoShare/wsgi.py"
+      }
     ]
 }
